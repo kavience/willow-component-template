@@ -1,8 +1,8 @@
 {
-  "name": "name",
+  "name": "{{name}}",
   "version": "0.0.1",
-  "description": "description",
-  "author": "author",
+  "description": "{{description}}",
+  "author": "{{author}}",
   "main": "lib/index.js",
   "scripts": {
     "dev": "npm run update-demo && dumi dev",
@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "{{gitRepository}}"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,scss,md}": [
