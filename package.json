@@ -4,6 +4,7 @@
   "description": "{{description}}",
   "author": "{{author}}",
   "main": "lib/index.js",
+  "keywords": [],
   "scripts": {
     "dev": "npm run update-demo && dumi dev",
     "build": "npm run update-demo && dumi build && npm run lib:build",
