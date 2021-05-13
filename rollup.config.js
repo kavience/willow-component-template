@@ -8,15 +8,15 @@ export default {
     dir: 'lib',
     format: 'cjs',
     exports: 'auto',
-    sourcemap: true
+    sourcemap: true,
   },
   plugins: [
     commonjs(),
     babel({
       configFile: './babel.config.js',
       babelHelpers: 'runtime',
-      extensions: ['ts', 'tsx', '.js', '.jsx']
+      extensions: ['ts', 'tsx', '.js', '.jsx'],
     }),
-    typescript({ tsconfig: './tsconfig.json' })
-  ]
+    typescript({ tsconfig: './tsconfig.json' }),
+  ],
 };

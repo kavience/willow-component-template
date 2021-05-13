@@ -1,15 +1,24 @@
 module.exports = {
-  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'airbnb',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
   },
   rules: {
-    'jsx-a11y/no-static-element-interactions': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    'react/display-name': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/button-has-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'no-use-before-define': 'off',
     'import/extensions': 'off',
     'arrow-body-style': 0,

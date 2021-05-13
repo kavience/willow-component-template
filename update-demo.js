@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /*
   用于 dumi 改造使用，
   可用于将 examples 的文件批量修改为 demo 引入形式，
@@ -5,11 +6,12 @@
 */
 
 const fs = require('fs');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const glob = require('glob');
 
 const paths = glob.sync('./docs/examples/*.tsx');
 
-paths.forEach(path => {
+paths.forEach((path) => {
   const name = path.split('/').pop().split('.')[0];
   fs.writeFile(
     `./docs/demo/${name}.md`,
@@ -18,12 +20,12 @@ paths.forEach(path => {
 <code src="../examples/${name}.tsx">
 `,
     'utf8',
-    function(error) {
-      if(error){
+    function (error) {
+      if (error) {
         console.log(error);
         return false;
       }
       console.log(`${name} 更新成功~`);
     }
-  )
+  );
 });
