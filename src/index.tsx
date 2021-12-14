@@ -1,9 +1,7 @@
 import React from 'react';
 
-class Index extends React.Component {
-  render() {
-    return <div>test</div>
-  }
-}
+const Index = (props: any) => {
+  return <div>willow-component-template</div>;
+};
 
 export default Index;

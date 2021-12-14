@@ -1,5 +1,6 @@
 ---
-title: docs en-US
+title: willow-component-template
 ---
 
-## introduction
+## Introduction
+a react component template of [willow-component-tool](https://github.com/kavience/willow-component-tool).

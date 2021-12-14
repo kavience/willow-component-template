@@ -4,8 +4,8 @@ export default {
   // publicPath: '/willow-component/',
   // base: '/willow-component',
   favicon:
-    'https://github.com/kavience/willow-components/blob/master/public/favicon.png?raw=true',
+    'https://github.com/kavience/willow-component-template/blob/master/public/assets/favicon.png?raw=true',
   logo:
-    'https://github.com/kavience/willow-components/blob/master/public/logo.png?raw=true',
+    'https://github.com/kavience/willow-component-template/blob/master/public/assets/logo.png?raw=true',
   locales: [['zh-CN', '中文'], ['en-US', 'English']]
 };

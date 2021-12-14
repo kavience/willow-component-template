@@ -1,6 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: 'src/index.tsx',
@@ -8,15 +9,16 @@ export default {
     dir: 'lib',
     format: 'cjs',
     exports: 'auto',
-    sourcemap: true,
+    sourcemap: true
   },
   plugins: [
     commonjs(),
+    postcss(),
     babel({
       configFile: './babel.config.js',
       babelHelpers: 'runtime',
-      extensions: ['ts', 'tsx', '.js', '.jsx'],
+      extensions: ['ts', 'tsx', '.js', '.jsx']
     }),
-    typescript({ tsconfig: './tsconfig.json' }),
-  ],
+    typescript({ tsconfig: './tsconfig.json' })
+  ]
 };

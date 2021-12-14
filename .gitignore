@@ -3,4 +3,6 @@ node_modules
 .umi-production
 yarn-error.log
 .DS_Store
-coverage
+coverage/
+dist
+lib

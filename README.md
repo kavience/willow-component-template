@@ -1,4 +1,4 @@
-<h1 align="center">willow-component-template</h1>
+<h1 align="center">React Component Template </h1>
 
 ## Introduction
 A template for quick build react component, and meanwhile is a template of [willow-component-tool](https://github.com/kavience/willow-component-tool).
@@ -28,6 +28,7 @@ A template for quick build react component, and meanwhile is a template of [will
 
 ```js
 "scripts": {
+  "prepare": "husky install && husky set .husky/pre-commit 'npm run lint' && husky add .husky/pre-commit 'npm run test'",
   // dev mod
   "dev": "npm run update-demo && dumi dev",
   // build docs and lib
@@ -41,8 +42,6 @@ A template for quick build react component, and meanwhile is a template of [will
   // run test
   "test": "cross-env IS_TEST=true jest",
   "test:with-coverage": "cross-env IS_TEST=true TEST_COVERAGE=true jest",
-  // init husky
- "husky:init": "husky install && husky set .husky/pre-commit 'npm run test' && husky set .husky/pre-commit 'npm run lint'"
 }
 ```
 

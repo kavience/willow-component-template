@@ -6,13 +6,20 @@
 */
 
 const fs = require('fs');
+const path = require('path');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const glob = require('glob');
 
 const paths = glob.sync('./docs/examples/*.tsx');
 
-paths.forEach((path) => {
-  const name = path.split('/').pop().split('.')[0];
+paths.forEach(p => {
+  const name = p
+    .split('/')
+    .pop()
+    .split('.')[0];
+  if (!fs.existsSync(path.resolve(__dirname, './docs/demo/'))) {
+    fs.mkdirSync(path.resolve(__dirname, './docs/demo/'));
+  }
   fs.writeFile(
     `./docs/demo/${name}.md`,
     `## ${name}
@@ -20,7 +27,7 @@ paths.forEach((path) => {
 <code src="../examples/${name}.tsx">
 `,
     'utf8',
-    function (error) {
+    function(error) {
       if (error) {
         console.log(error);
         return false;
