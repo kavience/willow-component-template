@@ -13,7 +13,16 @@ export default {
   },
   plugins: [
     commonjs(),
-    postcss(),
+    postcss({
+      minimize: true,
+      modules: false,
+      use: {
+        sass: null,
+        stylus: null,
+        less: { javascriptEnabled: true }
+      },
+      extract: true
+    }),
     babel({
       configFile: './babel.config.js',
       babelHelpers: 'runtime',
